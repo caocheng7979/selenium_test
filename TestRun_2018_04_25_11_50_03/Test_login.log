@@ -1,0 +1,25 @@
+2018-04-25 11:50:04,058 [line:24] Open Base sitehttps://192.168.10.30:8443/virtuoranc/login.html
+2018-04-25 11:50:07,085 [line:480] POST http://127.0.0.1:54423/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized"]}}}
+2018-04-25 11:50:08,826 [line:567] Finished Request
+2018-04-25 11:50:08,826 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/url {"url": "https://192.168.10.30:8443/virtuoranc/login.html", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:09,893 [line:567] Finished Request
+2018-04-25 11:50:09,894 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/timeouts/implicit_wait {"ms": 30000.0, "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:09,895 [line:567] Finished Request
+2018-04-25 11:50:09,895 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element {"using": "id", "value": "textfield-1017-inputEl", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,222 [line:567] Finished Request
+2018-04-25 11:50:10,223 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element/0.3741598002894666-1/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.3741598002894666-1", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,314 [line:567] Finished Request
+2018-04-25 11:50:10,315 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element {"using": "id", "value": "textfield-1019-inputEl", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,327 [line:567] Finished Request
+2018-04-25 11:50:10,327 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element/0.3741598002894666-2/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.3741598002894666-2", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,382 [line:567] Finished Request
+2018-04-25 11:50:10,382 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element {"using": "id", "value": "checkbox-1020-inputEl", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,395 [line:567] Finished Request
+2018-04-25 11:50:10,396 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element/0.3741598002894666-3/click {"id": "0.3741598002894666-3", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,442 [line:567] Finished Request
+2018-04-25 11:50:10,442 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element {"using": "id", "value": "container-1023-innerCt", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,458 [line:567] Finished Request
+2018-04-25 11:50:10,458 [line:480] POST http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/element/0.3741598002894666-4/click {"id": "0.3741598002894666-4", "sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:10,514 [line:567] Finished Request
+2018-04-25 11:50:10,523 [line:480] GET http://127.0.0.1:54423/session/70f3048ac867ec3ee20e99271030a1ff/screenshot {"sessionId": "70f3048ac867ec3ee20e99271030a1ff"}
+2018-04-25 11:50:13,361 [line:567] Finished Request
