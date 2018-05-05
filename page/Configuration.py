@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
-from test.page.browser import BasePage
-from test.common import CommonConfiguration
+from selenium_test.page.browser import BasePage
+from selenium_test.common import CommonConfiguration
 from selenium.webdriver.common.keys import Keys
 
 class ConfigurationPage(BasePage):

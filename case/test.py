@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from test.page.login import LoginPage
+from selenium_test.page.login import LoginPage
 
 class Test_login(unittest.TestCase):
     url = 'https://192.168.10.30:8443/virtuoranc/login.html'
@@ -11,12 +11,12 @@ class Test_login(unittest.TestCase):
 
     def setUp(self):
         self.page=LoginPage()
-        self.page.get(url)
-        self.page.set_username()
+        self.page.get(Test_login.url)
+        self.page.set_username(Test_login.username)
 
     
 
 
     def tearDown(self):
-
+        pass
         
