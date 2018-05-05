@@ -3,11 +3,11 @@ from datetime import datetime
 from common import LogUtility
 # import EmailUtils
 
+
 class RunTests(object):
     """description of class"""
     def __init__(self):
         self.testcaselistfile = "testcases.txt"
-        
 
     def LoadAndRunTestCases(self):
         try:
@@ -15,7 +15,7 @@ class RunTests(object):
             testfiles = [test for test in f.readlines() if not test.startswith("#")]
             f.close()
             for item in testfiles:
-                subprocess.call("nosetests case\\"+str(item).replace("\\n",""),shell = True)
+                subprocess.call("nosetests case\\"+str(item).replace("\\n", ""), shell=True)
         except Exception as err:
             LogUtility.logger.debug("Failed running test cases, error message: {}".format(str(err)))
         finally:
@@ -25,12 +25,11 @@ class RunTests(object):
     def CreateRunFolder(self):
         try:
             time = datetime.now()
-            subprocess.call("mkdir TestRun_"+time.strftime("%Y_%m_%d_%H_%M_%S"),shell=True)
-        except Exception as err :
+            subprocess.call("mkdir TestRun_"+time.strftime("%Y_%m_%d_%H_%M_%S"), shell=True)
+        except Exception as err:
             LogUtility.logger.debug("Failed creating run folder, error message: {}".format(str(err)))
 
 if __name__ == "__main__":
     newrun = RunTests()
     newrun.CreateRunFolder()
     newrun.LoadAndRunTestCases()
-    
