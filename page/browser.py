@@ -13,10 +13,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium_test.common import ResultFolder
 
+
 class BasePage(object):
     """description of class"""
 
-    #webdriver instance
+    # webdriver instance
     def __init__(self, browser='chrome'):
         '''
         initialize selenium webdriver, use chrome as default webdriver
@@ -40,7 +41,7 @@ class BasePage(object):
         except Exception:
             raise NameError("Not found %s browser,You can enter 'ie', 'ff' or 'chrome'." % browser)
 
-    def findElement(self,element):
+    def findElement(self, element):
         '''
         Find element
 
@@ -52,30 +53,30 @@ class BasePage(object):
         try:
             type = element[0]
             value = element[1]
-            if type == "id" or type == "ID" or type=="Id":
+            if type == "id" or type == "ID" or type == "Id":
                 elem = self.driver.find_element_by_id(value)
 
-            elif type == "name" or type == "NAME" or type=="Name":
+            elif type == "name" or type == "NAME" or type == "Name":
                 elem = self.driver.find_element_by_name(value)
 
-            elif type == "class" or type == "CLASS" or type=="Class":
+            elif type == "class" or type == "CLASS" or type == "Class":
                 elem = self.driver.find_element_by_class_name(value)
 
-            elif type == "link_text" or type == "LINK_TEXT" or type=="Link_text":
+            elif type == "link_text" or type == "LINK_TEXT" or type == "Link_text":
                 elem = self.driver.find_element_by_link_text(value)
 
-            elif type == "xpath" or type == "XPATH" or type=="Xpath":
+            elif type == "xpath" or type == "XPATH" or type == "Xpath":
                 elem = self.driver.find_element_by_xpath(value)
 
-            elif type == "css" or type == "CSS" or type=="Css":
+            elif type == "css" or type == "CSS" or type == "Css":
                 elem = self.driver.find_element_by_css_selector(value)
             else:
                 raise NameError("Please correct the type in function parameter")
         except Exception:
-            raise ValueError("No such element found"+ str(element))
+            raise ValueError("No such element found" + str(element))
         return elem
 
-    def findElements(self,element):
+    def findElements(self, element):
         '''
         Find elements
 
@@ -87,30 +88,30 @@ class BasePage(object):
         try:
             type = element[0]
             value = element[1]
-            if type == "id" or type == "ID" or type=="Id":
+            if type == "id" or type == "ID" or type == "Id":
                 elem = self.driver.find_elements_by_id(value)
 
-            elif type == "name" or type == "NAME" or type=="Name":
+            elif type == "name" or type == "NAME" or type == "Name":
                 elem = self.driver.find_elements_by_name(value)
 
-            elif type == "class" or type == "CLASS" or type=="Class":
+            elif type == "class" or type == "CLASS" or type == "Class":
                 elem = self.driver.find_elements_by_class_name(value)
 
-            elif type == "link_text" or type == "LINK_TEXT" or type=="Link_text":
+            elif type == "link_text" or type == "LINK_TEXT" or type == "Link_text":
                 elem = self.driver.find_elements_by_link_text(value)
 
-            elif type == "xpath" or type == "XPATH" or type=="Xpath":
+            elif type == "xpath" or type == "XPATH" or type == "Xpath":
                 elem = self.driver.find_elements_by_xpath(value)
 
-            elif type == "css" or type == "CSS" or type=="Css":
+            elif type == "css" or type == "CSS" or type == "Css":
                 elem = self.driver.find_elements_by_css_selector(value)
             else:
                 raise NameError("Please correct the type in function parameter")
         except Exception:
-            raise ValueError("No such element found"+ str(element))
+            raise ValueError("No such element found" + str(element))
         return elem
 
-    def open(self,url):
+    def open(self, url):
         '''
         Open web url
 
@@ -123,36 +124,35 @@ class BasePage(object):
         else:
             raise ValueError("please provide a base url")
 
-    def login(self,username='admin',password='admin'):
+    def login(self, username='admin', password='admin'):
         '''
         Login web
 
         Usage:
         self.login(username,password)
         '''
-        path_username = ('id','textfield-1017-inputEl')
-        path_password = ('id','textfield-1019-inputEl')
-        path_checkbox = ('id','checkbox-1020-inputEl')
-        path_okbutton = ('id','container-1023-innerCt')
+        path_username = ('id', 'textfield-1017-inputEl')
+        path_password = ('id', 'textfield-1019-inputEl')
+        path_checkbox = ('id', 'checkbox-1020-inputEl')
+        path_okbutton = ('id', 'container-1023-innerCt')
 
         # Get username textbox and input username
         name = self.findElement(path_username)
         name.send_keys(username)
 
-        # Get password textbox and input password, then hit return  
-        pwd = self.findElement(path_password)  
+        # Get password textbox and input password, then hit return
+        pwd = self.findElement(path_password)
         pwd.send_keys(password)
 
         # agree to the terms and conditions below
         check = self.findElement(path_checkbox)
         check.click()
-        
+
         # click login in
         okbtn = self.findElement(path_okbutton)
         okbtn.click()
 
-
-    def type(self,element,text):
+    def type(self, element, text):
         '''
         Operation input box.
 
@@ -161,8 +161,7 @@ class BasePage(object):
         '''
         element.send_keys(text)
 
-    
-    def enter(self,element):
+    def enter(self, element):
         '''
         Keyboard: hit return
 
@@ -170,26 +169,24 @@ class BasePage(object):
         self.enter(element)
         '''
         element.send_keys(Keys.RETURN)
-    
+
     # send same keys many times
-    def send_key(self,element,times,key):
+    def send_key(self, element, times, key):
         while times > 0:
             element.send_keys(key)
             times = times - 1
 
-    def click(self,element):
+    def click(self, element):
         '''
         Click page element, like button, image, link, etc.
         '''
         element.click()
-
 
     def quit(self):
         '''
         Quit webdriver
         '''
         self.driver.quit()
-
 
     def getAttribute(self, element, attribute):
         '''
@@ -227,7 +224,6 @@ class BasePage(object):
         screenshot = self.driver.save_screenshot(screenshot_path + '\\%s_%s.png' % (name, tm))
         return screenshot
 
-
     def maximizeWindow(self):
         '''
         Maximize current browser window
@@ -258,6 +254,3 @@ class BasePage(object):
         '''
         self.driver.refresh()
         # self.driver.switch_to()
-
-
-        
