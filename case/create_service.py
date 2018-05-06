@@ -3,35 +3,37 @@
 
 import os
 import sys
-import time 
+import time
 from test.common import common
 
-  
+
 def main(url):
     # login
-    browser=common.login(url)
+    browser = common.login(url)
     # Let the page load
     browser.implicitly_wait(30)
 
     browser.find_element_by_css_selector('#li_topologyComp > span').click()
-    browser.find_element_by_xpath("//body[@id='ext-element-1']/div[3]/div/div/div[2]/div/div/div/div/div/div/div/div/a/span/span").click()
-    browser.find_element_by_xpath("//body[@id='ext-element-1']/div[3]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div/a/span/span").click()
-    
-    common.set_service_name(browser,service_name='autotest')
+    browser.find_element_by_xpath(
+        "//body[@id='ext-element-1']/div[3]/div/div/div[2]/div/div/div/div/div/div/div/div/a/span/span").click()
+    browser.find_element_by_xpath(
+        "//body[@id='ext-element-1']/div[3]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div/a/span/span").click()
+
+    common.set_service_name(browser, service_name='autotest')
     # state: Active, Pending
-    common.set_service_state(browser,state='Active')
+    common.set_service_state(browser, state='Active')
     # service_linerate: 100G, 10G, 10G-e, 200G
-    common.set_service_linerate(browser,service_linerate='100G')
+    common.set_service_linerate(browser, service_linerate='100G')
     # service_rtObj: Least Cost, Least Hops, Least Latency, Manual
-    common.set_service_rtObj(browser,service_rtObj='Manual')
+    common.set_service_rtObj(browser, service_rtObj='Manual')
     # service Source Node
-    common.set_service_tidA(browser,service_tidA='kanagawa-T310-4')
+    common.set_service_tidA(browser, service_tidA='kanagawa-T310-4')
     # service Source End Point
     common.set_service_ctpAidA(browser)
     # service Target Node
-    common.set_service_tidZ(browser,service_tidZ='tokyo-T310-3')
+    common.set_service_tidZ(browser, service_tidZ='tokyo-T310-3')
     # service Target End Point
-    common.set_service_ctpAidZ(browser)    
+    common.set_service_ctpAidZ(browser)
     # save
     browser.find_element_by_link_text('Next').click()
     # # linkcombo
