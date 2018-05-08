@@ -13,25 +13,21 @@ class ConfigurationPage(BasePage):
         super().__init__(browser)
 
     # discover node
-    IP = ('id', 'gne1-inputEl')
-
     def set_ip(self, host):
-        try:
-            ip = self.findElement(ConfigurationPage.IP)
-            ip.click()
-            ip.send_keys(host)
-
-    SEEDNE = ('name', 'seedNe')
+        IP = ('id', 'gne1-inputEl')
+        ip = self.findElement(IP)
+        ip.click()
+        ip.send_keys(host)
 
     def set_seedNe(self, seedNe=True):
+        SEEDNE = ('name', 'seedNe')
         if seedNe is True:
-            self.findElement(ConfigurationPage.SEEDNE).click
+            self.findElement(SEEDNE).click
         else:
             pass
 
-    PROTOCOL = ('name', 'protocol')
-
     def set_protocol(self, protocol):
+        PROTOCOL = ('name', 'protocol')
         # self.find_element_by_name().click()
         pass
 

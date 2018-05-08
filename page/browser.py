@@ -39,7 +39,8 @@ class BasePage(object):
         try:
             self.driver = driver
         except Exception:
-            raise NameError("Not found %s browser,You can enter 'ie', 'ff' or 'chrome'." % browser)
+            raise NameError(
+                "Not found %s browser,You can enter 'ie', 'ff' or 'chrome'." % browser)
 
     def findElement(self, element):
         '''
@@ -71,7 +72,8 @@ class BasePage(object):
             elif type == "css" or type == "CSS" or type == "Css":
                 elem = self.driver.find_element_by_css_selector(value)
             else:
-                raise NameError("Please correct the type in function parameter")
+                raise NameError(
+                    "Please correct the type in function parameter")
         except Exception:
             raise ValueError("No such element found" + str(element))
         return elem
@@ -106,7 +108,8 @@ class BasePage(object):
             elif type == "css" or type == "CSS" or type == "Css":
                 elem = self.driver.find_elements_by_css_selector(value)
             else:
-                raise NameError("Please correct the type in function parameter")
+                raise NameError(
+                    "Please correct the type in function parameter")
         except Exception:
             raise ValueError("No such element found" + str(element))
         return elem
@@ -123,34 +126,6 @@ class BasePage(object):
             self.driver.implicitly_wait(30)
         else:
             raise ValueError("please provide a base url")
-
-    def login(self, username='admin', password='admin'):
-        '''
-        Login web
-
-        Usage:
-        self.login(username,password)
-        '''
-        path_username = ('id', 'textfield-1017-inputEl')
-        path_password = ('id', 'textfield-1019-inputEl')
-        path_checkbox = ('id', 'checkbox-1020-inputEl')
-        path_okbutton = ('id', 'container-1023-innerCt')
-
-        # Get username textbox and input username
-        name = self.findElement(path_username)
-        name.send_keys(username)
-
-        # Get password textbox and input password, then hit return
-        pwd = self.findElement(path_password)
-        pwd.send_keys(password)
-
-        # agree to the terms and conditions below
-        check = self.findElement(path_checkbox)
-        check.click()
-
-        # click login in
-        okbtn = self.findElement(path_okbutton)
-        okbtn.click()
 
     def type(self, element, text):
         '''
@@ -221,7 +196,8 @@ class BasePage(object):
             os.makedirs(screenshot_path)
 
         tm = time.strftime('%H%M%S', time.localtime(time.time()))
-        screenshot = self.driver.save_screenshot(screenshot_path + '\\%s_%s.png' % (name, tm))
+        screenshot = self.driver.save_screenshot(
+            screenshot_path + '\\%s_%s.png' % (name, tm))
         return screenshot
 
     def maximizeWindow(self):
@@ -254,3 +230,64 @@ class BasePage(object):
         '''
         self.driver.refresh()
         # self.driver.switch_to()
+
+    def login(self, username='admin', password='admin'):
+        '''
+        Login web
+
+        Usage:
+        self.login(username,password)
+        '''
+        path_username = ('id', 'textfield-1017-inputEl')
+        path_password = ('id', 'textfield-1019-inputEl')
+        path_checkbox = ('id', 'checkbox-1020-inputEl')
+        path_okbutton = ('id', 'container-1023-innerCt')
+
+        # Get username textbox and input username
+        name = self.findElement(path_username)
+        name.send_keys(username)
+
+        # Get password textbox and input password, then hit return
+        pwd = self.findElement(path_password)
+        pwd.send_keys(password)
+
+        # agree to the terms and conditions below
+        check = self.findElement(path_checkbox)
+        check.click()
+
+        # click login in
+        okbtn = self.findElement(path_okbutton)
+        okbtn.click()
+        return self
+
+    def choose_navigation(self, text):
+        '''
+        Choose navigation
+
+        Usage:
+        self.choose_navigation(text)
+        '''
+        path_dashboard = ('css', '#li_dashboardComp > span')
+        path_network = ('css', '#li_topologyComp > span')
+        path_design = ('css', '#li_designComp > span')
+        path_configuration = ('css', '#li_policyComp > span')
+        path_monitor = ('css', '#li_fpmComp > span')
+        path_administration = ('css', '#li_sysAdminComp > span')
+
+        if text == "dashboard" or text == "Dashboard" or text == "DASHBOARD":
+            dashboard = self.findElement(path_dashboard)
+            dashboard.click()
+        elif text == "network" or text == "Network" or text == "NETWORK":
+            network = self.findElement(path_network)
+            network.click()
+        elif text == "design" or text == "Design" or text == "DESGIN":
+            design = self.findElement(path_design)
+            design.click()
+        elif text == "configuration" or text == "Configuration" or text == "CONFIGURATION":
+            configuration = self.findElement(path_configuration)
+            configuration.click()
+        elif text == "monitor" or text == "Monitor" or text == "MONITOR":
+            self.findElement(path_monitor).click()
+        elif text == "administration" or text == "Administration" or text == "ADMINISTRATION":
+            administration = self.findElement(path_administration)
+            administration.click()
