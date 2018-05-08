@@ -2,17 +2,17 @@
 
 ## 功能
 
-* 使用python的selenium库在UI层进行自动化测试solval
+* 使用python的selenium库在UI层进行自动化测试solval
 * tmp文件夹下为简化的功能个实现
-* 具体实现使用POM模式(Page Object Model)进行设计完成
+* 具体实现使用POM模式(Page Object Model)进行设计完成
 
-### case文件夹下编写各测试用例
+### case文件夹下编写各测试用例
 
     test.py
 
-### common文件夹下为通用方法
+### common文件夹下为通用方法
 
-* CommonConfiguration.py
+* CommonConfiguration.py
 
         baseUrl
         getCurrentTime
@@ -50,4 +50,4 @@
 ### 其他
 
     webAutomation.py用于读取testcases.txt中写入的测试用例文件名
-    按顺序进行多个测试的执行并生成测试用例报告
+    按顺序进行多个测试的执行并生成测试用例报告
