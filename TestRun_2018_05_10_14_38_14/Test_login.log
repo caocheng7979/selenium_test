@@ -1,0 +1,47 @@
+2018-05-10 14:38:15,296 [line:24] Open Base sitehttps://172.16.0.10:8443/virtuoranc/login.html
+2018-05-10 14:38:18,320 [line:480] POST http://127.0.0.1:52703/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized", "lang=en-US.UTF-8"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized", "lang=en-US.UTF-8"]}}}
+2018-05-10 14:38:19,796 [line:567] Finished Request
+2018-05-10 14:38:19,797 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/url {"url": "https://172.16.0.10:8443/virtuoranc/login.html", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,002 [line:567] Finished Request
+2018-05-10 14:38:21,002 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/timeouts/implicit_wait {"ms": 30000.0, "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,003 [line:567] Finished Request
+2018-05-10 14:38:21,003 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "id", "value": "textfield-1017-inputEl", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,252 [line:567] Finished Request
+2018-05-10 14:38:21,253 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.7454066010534781-1/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.7454066010534781-1", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,332 [line:567] Finished Request
+2018-05-10 14:38:21,332 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "id", "value": "textfield-1019-inputEl", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,348 [line:567] Finished Request
+2018-05-10 14:38:21,348 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.7454066010534781-2/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.7454066010534781-2", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,423 [line:567] Finished Request
+2018-05-10 14:38:21,423 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "id", "value": "checkbox-1020-inputEl", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,444 [line:567] Finished Request
+2018-05-10 14:38:21,445 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.7454066010534781-3/click {"id": "0.7454066010534781-3", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,516 [line:567] Finished Request
+2018-05-10 14:38:21,516 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "id", "value": "container-1023-innerCt", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,534 [line:567] Finished Request
+2018-05-10 14:38:21,534 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.7454066010534781-4/click {"id": "0.7454066010534781-4", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:21,591 [line:567] Finished Request
+2018-05-10 14:38:21,594 [line:480] GET http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/screenshot {"sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:24,670 [line:567] Finished Request
+2018-05-10 14:38:24,674 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "css selector", "value": "#li_policyComp > span", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:25,919 [line:567] Finished Request
+2018-05-10 14:38:25,919 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.13504481034114546-1/click {"id": "0.13504481034114546-1", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:27,612 [line:567] Finished Request
+2018-05-10 14:38:27,614 [line:480] GET http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/screenshot {"sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,208 [line:567] Finished Request
+2018-05-10 14:38:28,210 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "xpath", "value": "//div[@id='policyGrid-body']//a[contains(text(), '100.100.100.2:830')]/../../../td/div/span", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,252 [line:567] Finished Request
+2018-05-10 14:38:28,252 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.13504481034114546-2/click {"id": "0.13504481034114546-2", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,418 [line:567] Finished Request
+2018-05-10 14:38:28,419 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "xpath", "value": "//div[@id='discoverPolicyMgr-bodyWrap']/div[2]/div/div/a[2]/span/span/span", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,451 [line:567] Finished Request
+2018-05-10 14:38:28,452 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.13504481034114546-3/click {"id": "0.13504481034114546-3", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,602 [line:567] Finished Request
+2018-05-10 14:38:28,604 [line:480] GET http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/screenshot {"sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:28,998 [line:567] Finished Request
+2018-05-10 14:38:29,006 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element {"using": "xpath", "value": "//div[@id='messagebox-1001-bodyWrap']//span[contains(text(), 'Yes')]", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:29,022 [line:567] Finished Request
+2018-05-10 14:38:29,022 [line:480] POST http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/element/0.13504481034114546-4/click {"id": "0.13504481034114546-4", "sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:29,112 [line:567] Finished Request
+2018-05-10 14:38:29,113 [line:480] GET http://127.0.0.1:52703/session/ea7d4092c722042380c4553ef0a51551/screenshot {"sessionId": "ea7d4092c722042380c4553ef0a51551"}
+2018-05-10 14:38:29,489 [line:567] Finished Request

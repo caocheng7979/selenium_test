@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import unittest
@@ -19,9 +19,16 @@ class Test_login(unittest.TestCase):
         LogUtility.CreateLoggerFile("Test_login")
 
     def test_login_1(self):
+        ADDIP = ('100.100.100.2', '100.100.100.3')
+        DELIP = ('100.100.100.2:830', )
         path_discoverNe = ('link_text', 'Discover NE')
         path_addNe = (
             'xpath', "//div[@id='discoverPolicyMgr-bodyWrap']/div[2]/div/div/a/span/span/span")
+        path_delne = (
+            'xpath', "//div[@id='discoverPolicyMgr-bodyWrap']/div[2]/div/div/a[2]/span/span/span")
+        path_confirm = (
+            'xpath', "//div[@id='messagebox-1001-bodyWrap']//span[contains(text(), 'Yes')]")
+        path_save = ('link_text', 'Save')
         try:
             self.testCaseInfo.starttime = cc.getCurrentTime()
 
@@ -35,10 +42,23 @@ class Test_login(unittest.TestCase):
             sol_val.save_screen_shot()
             # sol_val.findElement(path_discoverNe).click()
             # sol_val.save_screen_shot()
-            sol_val.findElement(path_addNe).click()
-            sol_val.save_screen_shot()
-            sol_val.set_ip('100.100.100.2')
-            sol_val.save_screen_shot()
+            # add NE
+            # for ip in ADDIP:
+            #     sol_val.findElement(path_addNe).click()
+            #     sol_val.save_screen_shot()
+            #     sol_val.set_ip(ip)
+            #     sol_val.set_seedNe()
+            #     sol_val.findElement(path_save).click()
+            #     sol_val.save_screen_shot()
+            #     time.sleep(5)
+            # delete NE
+            for ip in DELIP:
+                sol_val.selectNode_conf(ip)  # name of nod(ip)
+                sol_val.findElement(path_delne).click()
+                sol_val.save_screen_shot()
+                sol_val.findElement(path_confirm).click()
+                sol_val.save_screen_shot()
+                time.sleep(5)
             self.testCaseInfo.result = "Pass"
 
         except Exception as err:
@@ -51,7 +71,7 @@ class Test_login(unittest.TestCase):
         pass
 
     def tearDown(self):
-        time.sleep(30)
+        time.sleep(10)
 
 
 if __name__ == '__main__':

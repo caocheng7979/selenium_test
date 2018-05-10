@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 def baseUrl():
-    return "https://10.31.121.51:8443/virtuoranc/login.html"
+    return "https://172.16.0.10:8443/virtuoranc/login.html"
 
 
 # change time to str

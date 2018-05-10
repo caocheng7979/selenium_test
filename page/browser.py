@@ -29,6 +29,7 @@ class BasePage(object):
             chromeOptions = webdriver.ChromeOptions()
             chromeOptions.accept_untrusted_certs = True
             chromeOptions.add_argument("--start-maximized")
+            chromeOptions.add_argument("lang=en-US.UTF-8")
             driver = webdriver.Chrome(chrome_options=chromeOptions)
         elif browser == "internet explorer" or browser == "ie":
             driver = webdriver.Ie()

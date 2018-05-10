@@ -11,13 +11,17 @@ from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 # send same keys many times
-def send_key(self,times,key):
+
+
+def send_key(self, times, key):
     while times > 0:
         self.send_keys(key)
         times = times - 1
 
-# login website 
-def login(url,user_name='admin',password='admin'):
+# login website
+
+
+def login(url, user_name='admin', password='admin'):
     chromeOptions = webdriver.ChromeOptions()
     chromeOptions.accept_untrusted_certs = True
     chromeOptions.add_argument("--start-maximized")
@@ -29,7 +33,7 @@ def login(url,user_name='admin',password='admin'):
 
     # Let the page load
     browser.implicitly_wait(60)
-    
+
     # login start
     browser.find_element_by_id('textfield-1017-inputEl').clear()
     browser.find_element_by_id('textfield-1017-inputEl').send_keys(user_name)
@@ -44,125 +48,129 @@ def login(url,user_name='admin',password='admin'):
     return browser
 
 
-# service  
+# service
 # service Name
-def set_service_name(browser,service_name):
-        name = browser.find_element_by_name('svcName')
-        name.send_keys(service_name)
-    
+def set_service_name(browser, service_name):
+    name = browser.find_element_by_name('svcName')
+    name.send_keys(service_name)
+
 
 # service State
-def set_service_state(browser,state):
+def set_service_state(browser, state):
     if state == 'Active':
-            state = browser.find_element_by_name('state')
-            state.click()
-            state.send_keys(Keys.DOWN)
-            state.send_keys(Keys.ENTER)
+        state = browser.find_element_by_name('state')
+        state.click()
+        state.send_keys(Keys.DOWN)
+        state.send_keys(Keys.ENTER)
 
     elif state == 'Pending':
-            pass
+        pass
 
 # service Line Rate
-def set_service_linerate(browser,service_linerate):
+
+
+def set_service_linerate(browser, service_linerate):
     if service_linerate == '100G':
         pass
 
     elif service_linerate == '10G':
-            linerate = browser.find_element_by_name('lineRate')
-            linerate.click()
-            linerate.send_keys(Keys.DOWN)
-            linerate.send_keys(Keys.ENTER)
+        linerate = browser.find_element_by_name('lineRate')
+        linerate.click()
+        linerate.send_keys(Keys.DOWN)
+        linerate.send_keys(Keys.ENTER)
 
     elif service_linerate == '10G-e':
-            linerate = browser.find_element_by_name('lineRate')
-            linerate.click()
-            send_key(linerate,2,Keys.DOWN)
-            linerate.send_keys(Keys.ENTER)
+        linerate = browser.find_element_by_name('lineRate')
+        linerate.click()
+        send_key(linerate, 2, Keys.DOWN)
+        linerate.send_keys(Keys.ENTER)
 
     elif service_linerate == '200G':
-            linerate = browser.find_element_by_name('lineRate')
-            linerate.click()
-            send_key(linerate,3,Keys.DOWN)
-            linerate.send_keys(Keys.ENTER)
+        linerate = browser.find_element_by_name('lineRate')
+        linerate.click()
+        send_key(linerate, 3, Keys.DOWN)
+        linerate.send_keys(Keys.ENTER)
 
 # service Routing Objective
-def set_service_rtObj(browser,service_rtObj):
+
+
+def set_service_rtObj(browser, service_rtObj):
     if service_rtObj == 'Least Cost':
-            pass
+        pass
 
     elif service_rtObj == 'Least Hops':
-            routing_objective = browser.find_element_by_name('rtObj')
-            routing_objective.click()
-            routing_objective.send_keys(Keys.DOWN)
-            routing_objective.send_keys(Keys.ENTER)
-
+        routing_objective = browser.find_element_by_name('rtObj')
+        routing_objective.click()
+        routing_objective.send_keys(Keys.DOWN)
+        routing_objective.send_keys(Keys.ENTER)
 
     elif service_rtObj == 'Least Latency':
-            routing_objective = browser.find_element_by_name('rtObj')
-            routing_objective.click()
-            send_key(routing_objective,2,Keys.DOWN)
-            routing_objective.send_keys(Keys.ENTER)
-
+        routing_objective = browser.find_element_by_name('rtObj')
+        routing_objective.click()
+        send_key(routing_objective, 2, Keys.DOWN)
+        routing_objective.send_keys(Keys.ENTER)
 
     elif service_rtObj == 'Manual':
-            routing_objective = browser.find_element_by_name('rtObj')
-            routing_objective.click()
-            send_key(routing_objective,3,Keys.DOWN)
-            routing_objective.send_keys(Keys.ENTER)
+        routing_objective = browser.find_element_by_name('rtObj')
+        routing_objective.click()
+        send_key(routing_objective, 3, Keys.DOWN)
+        routing_objective.send_keys(Keys.ENTER)
 
 
 # service Source Node
-def set_service_tidA(browser,service_tidA):
-        source_node = browser.find_element_by_name('tidA')
-        source_node.click()
-        source_node.clear()
-        source_node.send_keys(service_tidA)
-        source_node.send_keys(Keys.ENTER)
+def set_service_tidA(browser, service_tidA):
+    source_node = browser.find_element_by_name('tidA')
+    source_node.click()
+    source_node.clear()
+    source_node.send_keys(service_tidA)
+    source_node.send_keys(Keys.ENTER)
 
 
 # service Source End Point
 def set_service_ctpAidA(browser):
-        source_end_point = browser.find_element_by_name('ctpAidA')
-        source_end_point.click()
-        source_end_point.send_keys(Keys.DOWN)
-        source_end_point.send_keys(Keys.ENTER)
+    source_end_point = browser.find_element_by_name('ctpAidA')
+    source_end_point.click()
+    source_end_point.send_keys(Keys.DOWN)
+    source_end_point.send_keys(Keys.ENTER)
 
 
 # service Target Node
-def set_service_tidZ(browser,service_tidZ):
-        target_node = browser.find_element_by_name('tidZ')
-        target_node.click()
-        target_node.clear()
-        target_node.send_keys(service_tidZ)
-        target_node.send_keys(Keys.ENTER)
+def set_service_tidZ(browser, service_tidZ):
+    target_node = browser.find_element_by_name('tidZ')
+    target_node.click()
+    target_node.clear()
+    target_node.send_keys(service_tidZ)
+    target_node.send_keys(Keys.ENTER)
 
 
 # service Target End Point
 def set_service_ctpAidZ(browser):
-        service_target_end_point = browser.find_element_by_name('ctpAidZ')
-        service_target_end_point.click()
-        service_target_end_point.send_keys(Keys.DOWN)
-        service_target_end_point.send_keys(Keys.ENTER)
+    service_target_end_point = browser.find_element_by_name('ctpAidZ')
+    service_target_end_point.click()
+    service_target_end_point.send_keys(Keys.DOWN)
+    service_target_end_point.send_keys(Keys.ENTER)
 
-    
+
 # discover node
-def set_ip(browser,host):
-        ip = browser.find_element_by_id('gne1-inputEl')
-        ip.click()
-        ip.send_keys(host)
+def set_ip(browser, host):
+    ip = browser.find_element_by_id('gne1-inputEl')
+    ip.click()
+    ip.send_keys(host)
 
 
-def set_seedNe(browser,seedNe= True):
+def set_seedNe(browser, seedNe=True):
     if seedNe == True:
         browser.find_element_by_name('seedNe').click
     else:
         pass
 
-def set_protocol(browser,protocol):
+
+def set_protocol(browser, protocol):
     # browser.find_element_by_name('protocol').click()
     pass
 
-def set_port(browser,port_id):
+
+def set_port(browser, port_id):
     # port = browser.find_element_by_name('port').click()
     # port.send_keys('')
     pass
@@ -171,7 +179,8 @@ def set_port(browser,port_id):
 #     # port = browser.find_element_by_name('transport').click()
 #     pass
 
-def choose_layers(browser,layer):
+
+def choose_layers(browser, layer):
     layers = browser.find_elements_by_name('topoLayerGrp')
     if layer == 'WDM':
         layer_wdm = layers[0]
@@ -183,10 +192,14 @@ def choose_layers(browser,layer):
         layer_packet = layer[2]
         layer_packet.click()
 
-def selectNode_conf(browser,node_id):  
-    xpath = "//div[@id='policyGrid-body']//a[contains(text(), \'"+node_id+"\')]/../../../td/div/span"
+
+def selectNode_conf(browser, node_id):
+    xpath = "//div[@id='policyGrid-body']//a[contains(text(), \'" + \
+        node_id+"\')]/../../../td/div/span"
     browser.find_element_by_xpath(xpath=xpath).click()
 
-def selectNode_net(browser,node_id):  
-    xpath = "//div[@id='inventoryGridId-body']//a[contains(text(), \'"+node_id+"\')]/../../div[3]"
+
+def selectNode_net(browser, node_id):
+    xpath = "//div[@id='inventoryGridId-body']//a[contains(text(), \'" + \
+        node_id+"\')]/../../div[3]"
     browser.find_element_by_xpath(xpath=xpath).click()

@@ -1,0 +1,44 @@
+2018-05-10 14:34:06,076 [line:24] Open Base sitehttps://172.16.0.10:8443/virtuoranc/login.html
+2018-05-10 14:34:09,105 [line:480] POST http://127.0.0.1:52419/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized", "lang=en-US.UTF-8"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--start-maximized", "lang=en-US.UTF-8"]}}}
+2018-05-10 14:34:10,532 [line:567] Finished Request
+2018-05-10 14:34:10,532 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/url {"url": "https://172.16.0.10:8443/virtuoranc/login.html", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:11,708 [line:567] Finished Request
+2018-05-10 14:34:11,708 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/timeouts/implicit_wait {"ms": 30000.0, "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:11,709 [line:567] Finished Request
+2018-05-10 14:34:11,709 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "id", "value": "textfield-1017-inputEl", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:11,932 [line:567] Finished Request
+2018-05-10 14:34:11,933 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.9598203205674201-1/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.9598203205674201-1", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,006 [line:567] Finished Request
+2018-05-10 14:34:12,006 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "id", "value": "textfield-1019-inputEl", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,025 [line:567] Finished Request
+2018-05-10 14:34:12,026 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.9598203205674201-2/value {"text": "admin", "value": ["a", "d", "m", "i", "n"], "id": "0.9598203205674201-2", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,097 [line:567] Finished Request
+2018-05-10 14:34:12,097 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "id", "value": "checkbox-1020-inputEl", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,117 [line:567] Finished Request
+2018-05-10 14:34:12,117 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.9598203205674201-3/click {"id": "0.9598203205674201-3", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,180 [line:567] Finished Request
+2018-05-10 14:34:12,181 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "id", "value": "container-1023-innerCt", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,194 [line:567] Finished Request
+2018-05-10 14:34:12,195 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.9598203205674201-4/click {"id": "0.9598203205674201-4", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:12,252 [line:567] Finished Request
+2018-05-10 14:34:12,254 [line:480] GET http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/screenshot {"sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:15,488 [line:567] Finished Request
+2018-05-10 14:34:15,490 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "css selector", "value": "#li_policyComp > span", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:17,124 [line:567] Finished Request
+2018-05-10 14:34:17,124 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.39226850882951836-1/click {"id": "0.39226850882951836-1", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:18,824 [line:567] Finished Request
+2018-05-10 14:34:18,826 [line:480] GET http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/screenshot {"sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:19,379 [line:567] Finished Request
+2018-05-10 14:34:19,381 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "xpath", "value": "//div[@id='policyGrid-body']//a[contains(text(), '100.100.100.2:830')]/../../../td/div/span", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:19,418 [line:567] Finished Request
+2018-05-10 14:34:19,419 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.39226850882951836-2/click {"id": "0.39226850882951836-2", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:19,539 [line:567] Finished Request
+2018-05-10 14:34:19,540 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "xpath", "value": "//div[@id='discoverPolicyMgr-bodyWrap']/div[2]/div/div/a[2]/span/span/span", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:19,581 [line:567] Finished Request
+2018-05-10 14:34:19,581 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element/0.39226850882951836-3/click {"id": "0.39226850882951836-3", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:19,735 [line:567] Finished Request
+2018-05-10 14:34:19,737 [line:480] GET http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/screenshot {"sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:20,126 [line:567] Finished Request
+2018-05-10 14:34:20,128 [line:480] POST http://127.0.0.1:52419/session/bdece60a13304df8397332bdfab83e9e/element {"using": "xpath", "value": "//div[@id='discoverPolicyMgr-bodyWrap']//span[contains(text(), 'Yes')]", "sessionId": "bdece60a13304df8397332bdfab83e9e"}
+2018-05-10 14:34:50,176 [line:567] Finished Request
+2018-05-10 14:34:50,176 [line:24] Got error: No such element found('xpath', "//div[@id='discoverPolicyMgr-bodyWrap']//span[contains(text(), 'Yes')]")

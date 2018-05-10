@@ -28,7 +28,7 @@ def main(url):
     browser.find_element_by_xpath(
         "//div[@id='discoverPolicyMgr-bodyWrap']/div[2]/div/div/a[2]/span/span/span").click()
     browser.find_element_by_xpath(
-        "//div[@id='discoverPolicyMgr-bodyWrap']//span[contains(text(), 'はい')]").click()
+        "//div[@id='messagebox-1001-bodyWrap']//span[contains(text(), 'はい')]").click()
 
 
 if __name__ == '__main__':

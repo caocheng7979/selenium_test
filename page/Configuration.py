@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 
 class ConfigurationPage(BasePage):
     """description of class"""
+
     def __init__(self, browser='chrome'):
         super().__init__(browser)
 
@@ -20,9 +21,10 @@ class ConfigurationPage(BasePage):
         ip.send_keys(host)
 
     def set_seedNe(self, seedNe=True):
-        SEEDNE = ('name', 'seedNe')
+        SEEDNE = ('id', 'isSeedNe-inputEl')
         if seedNe is True:
-            self.findElement(SEEDNE).click
+            isSeedNe = self.findElement(SEEDNE)
+            isSeedNe.click()
         else:
             pass
 
@@ -41,9 +43,11 @@ class ConfigurationPage(BasePage):
     #     pass
 
     def selectNode_conf(self, node_id):
-        xpath = "//div[@id='policyGrid-body']//a[contains(text(), \'" + node_id + "\')]/../../../td/div/span"
-        self.find_element_by_xpath(xpath=xpath).click()
+        path_seleceNe = ('xpath', "//div[@id='policyGrid-body']//a[contains(text(), \'" +
+                         node_id + "\')]/../../../td/div/span")
+        self.findElement(path_seleceNe).click()
 
     def selectNode_net(self, node_id):
-        xpath = "//div[@id='inventoryGridId-body']//a[contains(text(), \'" + node_id + "\')]/../../div[3]"
+        xpath = "//div[@id='inventoryGridId-body']//a[contains(text(), \'" + \
+            node_id + "\')]/../../div[3]"
         self.find_element_by_xpath(xpath=xpath).click()
